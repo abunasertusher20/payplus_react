@@ -1,0 +1,270 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c084fc;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a855f7;
+}
+
+/* Selection color */
+::selection {
+  background-color: #d946ef;
+  color: white;
+}
+
+/* Focus styles for accessibility */
+button:focus,
+a:focus,
+input:focus,
+textarea:focus {
+  outline: 2px solid #c084fc;
+  outline-offset: 2px;
+}
+
+/* Loading animation */
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 3s linear infinite;
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, #a855f7 0%, #ec4899 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Backdrop blur support for older browsers */
+@supports not (backdrop-filter: blur(10px)) {
+  .backdrop-blur {
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+}
+
+/* Print styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  .app-section::before,
+  .app-section::after {
+    display: none;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .bg-fuchsia-100 {
+    background-color: #ffffff;
+  }
+  
+  .text-gray-800 {
+    color: #000000;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  
+  .animate-scroll,
+  .slide-down,
+  .fade-in,
+  .fade-in-delay,
+  .fade-in-up,
+  .fade-in-up1,
+  .fade-in-up2,
+  .animate-ping-scale {
+    animation: none !important;
+  }
+}
+
+/* Dark mode support (optional) */
+@media (prefers-color-scheme: dark) {
+  /* You can add dark mode styles here if needed */
+}
+
+/* Mobile-first responsive design */
+.container {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+/* Utility classes for React specific needs */
+.react-fade-enter {
+  opacity: 0;
+}
+
+.react-fade-enter-active {
+  opacity: 1;
+  transition: opacity 300ms ease-in;
+}
+
+.react-fade-exit {
+  opacity: 1;
+}
+
+.react-fade-exit-active {
+  opacity: 0;
+  transition: opacity 300ms ease-out;
+}
+
+/* Ensure images are responsive */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Form element styles */
+input, textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Link styles */
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+/* Button base styles */
+button {
+  cursor: pointer;
+  font-family: inherit;
+}
+
+/* Disabled state styles */
+button:disabled,
+input:disabled,
+textarea:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Custom focus styles for form elements */
+input:focus,
+textarea:focus,
+select:focus {
+  box-shadow: 0 0 0 3px rgba(168, 85, 247, 0.1);
+  border-color: #a855f7;
+}
+
+/* Custom styles for the app section background fix */
+.app-section {
+  position: relative;
+  isolation: isolate;
+}
+
+.app-section > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Fix for mobile address bar */
+@media (max-height: 700px) and (orientation: landscape) {
+  .mt-header {
+    margin-top: 60px;
+  }
+}
+
+/* Very small screen adjustments */
+@media (max-width: 360px) {
+  .container {
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+  }
+}
+
+/* Large screen adjustments */
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536px;
+  }
+}
+
+/* Safari specific fixes */
+@supports (-webkit-touch-callout: none) {
+  .app-section::before {
+    background-attachment: scroll;
+  }
+}
+
+/* Firefox specific fixes */
+@-moz-document url-prefix() {
+  .border-animate span {
+    transition: all 0.4s ease;
+  }
+}
+
+/* IE 11 support (if needed) */
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .app-section::before,
+  .app-section::after {
+    display: none;
+  }
+  
+  .gradient-text {
+    background: none;
+    color: #a855f7;
+  }
+}

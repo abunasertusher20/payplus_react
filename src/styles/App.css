@@ -1,0 +1,399 @@
+
+/* Scroll animation for carousel */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll {
+  animation: scroll-left 20s linear infinite;
+}
+
+/* 50% transparency background for header on scroll */
+.bg-half-transparent {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Margin top for hero section to avoid header overlap */
+.mt-header {
+  margin-top: 72px;
+}
+
+/* --- Animation for fade-in on scroll --- */
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.6s ease-out forwards;
+  animation-delay: 0s;
+}
+
+.fade-in-up1 {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.8s ease-out forwards;
+  animation-delay: 0.3s;
+}
+
+.fade-in-up2 {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.8s ease-out forwards;
+  animation-delay: 0.6s;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --- Feature card fade-in --- */
+.feature-card {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.feature-card.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* --- about card fade-in --- */
+.about-card {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.about-card.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Custom styles from Style.css */
+#mainHeader {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 50;
+  transition: all 0.3s;
+  background-color: #f5d0fe;
+  box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.25);
+}
+
+#mainHeader.transparent-bg {
+  background-color: rgba(215, 176, 250, 0.75);
+  box-shadow: none;
+  backdrop-filter: saturate(180%) blur(20px);
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.app-section {
+  position: relative;
+  color: #fae8ff;
+  border: 50px solid #fae8ff;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.app-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url('../assets/BG/BG2.gif') no-repeat center;
+  background-size: contain;
+  opacity: 0.6;
+  z-index: -2;
+  border-radius: inherit; 
+}
+
+.app-section::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at center,
+    rgba(231, 54, 201, 0.7) 0%,
+    rgba(98, 39, 133, 0.7) 100%
+  );
+  z-index: -1;
+  border-radius: inherit;
+}
+
+#carousel {
+  background: radial-gradient(
+    circle at center,
+    rgba(231, 54, 201, 0.7) 0%,
+    rgba(98, 39, 133, 0.7) 100%
+  );
+  padding: 60px 80px;
+  text-align: center;
+  border-radius: 50% 20% / 20% 50%;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+#Contact {
+  padding: 60px 80px;
+  text-align: center;
+  border-radius: 0% 20% / 20% 50%;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.slide-down {
+  opacity: 0;
+  transform: translateY(-50px);
+  animation: slideDown 1s ease-out forwards;
+}
+
+@keyframes slideDown {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s ease-out forwards;
+  animation-delay: 0.5s;
+}
+
+.fade-in-delay {
+  opacity: 0;
+  animation: fadeIn 1s ease-out forwards;
+  animation-delay: 0.5s;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.border-animate {
+  position: relative;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.border-animate span {
+  position: absolute;
+  background-color: #e879f9;
+  transition: all 0.3s ease;
+}
+
+.border-animate span:nth-child(1) {
+  top: 0;
+  left: 0;
+  height: 4px;
+  width: 0;
+}
+
+.border-animate.active span:nth-child(1) {
+  width: 100%;
+  transition-delay: 0s;
+}
+
+.border-animate span:nth-child(2) {
+  top: 0;
+  right: 0;
+  width: 4px;
+  height: 0;
+}
+
+.border-animate.active span:nth-child(2) {
+  height: 100%;
+  transition-delay: 0.1s;
+}
+
+.border-animate span:nth-child(3) {
+  bottom: 0;
+  right: 0;
+  height: 4px;
+  width: 0;
+}
+
+.border-animate.active span:nth-child(3) {
+  width: 100%;
+  transition-delay: 0.2s;
+}
+
+.border-animate span:nth-child(4) {
+  bottom: 0;
+  left: 0;
+  width: 4px;
+  height: 0;
+}
+
+.border-animate.active span:nth-child(4) {
+  height: 100%;
+  transition-delay: 0.3s;
+}
+
+.border-animate:hover span:nth-child(1) {
+  width: 100%;
+}
+
+.border-animate:hover span:nth-child(2) {
+  height: 100%;
+}
+
+.border-animate:hover span:nth-child(3) {
+  width: 100%;
+}
+
+.border-animate:hover span:nth-child(4) {
+  height: 100%;
+}
+
+#ui_border {
+  position: relative;
+  width: 18%;
+  height: auto;
+  right: 25%;
+}
+
+#ui_layer2 {
+  position: absolute;
+  top: 0;
+  right: 10%;
+  transform: translateX(80%);
+  z-index: 0;
+  opacity: 0.8;
+  transition: transform 0.2s ease-out;
+}
+
+.circle {
+  width: 20px;
+  height: 20px;
+  background-color: #8e44ad;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.circle::after {
+  content: '';
+  width: 6px;
+  height: 6px;
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+}
+
+@keyframes ping-scale {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 0.8;
+  }
+}
+
+.animate-ping-scale {
+  animation: ping-scale 1.5s infinite ease-in-out;
+}
+
+@media (max-width: 640px) {
+  #mainHeader {
+    position: fixed;
+    box-shadow: none;
+    background-color: rgb(255, 255, 255) !important;
+  }
+  
+  #mainHeader.transparent-bg {
+    background-color: rgba(215, 176, 250, 0.75) !important;
+    box-shadow: none;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  #mainHeader nav a[href="#About"] {
+    display: none !important;
+  }
+
+  #mainHeader #Whatsapp {
+    display: none !important;
+  }
+
+  .app-section {
+    border: 20px solid #fae8ff;
+    border-radius: 40px;
+  }
+
+  #ui_border {
+    width: 50%;
+    right: 0;
+  }
+  
+  #ui_layer2 {
+    right: 5%;
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 480px) {
+  #ui_border {
+    width: 80%;
+    right: 0;
+  }
+  
+  #ui_layer2 {
+    right: 2%;
+    transform: translateX(0);
+  }
+}
+
+
+/* Simple fade-in animation for about cards */
+@keyframes aboutFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.about-card:nth-child(1).is-visible {
+  animation: aboutFadeIn 0.8s ease-out forwards;
+}
+
+.about-card:nth-child(2).is-visible {
+  animation: aboutFadeIn 0.8s ease-out 0.3s forwards;
+}
+
+.about-card:nth-child(3).is-visible {
+  animation: aboutFadeIn 0.8s ease-out 0.6s forwards;
+}
+
+/* Tab Button Animation */
+.tab-anim {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease;
+}
+
+.tab-anim.show {
+  opacity: 1;
+  transform: translateY(0);
+}
