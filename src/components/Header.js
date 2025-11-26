@@ -62,22 +62,21 @@ const Header = () => {
   }, []);
 
   return (
-    <header id="mainHeader" className="flex flex-row items-center justify-between p-4 fixed w-full top-0 z-50 transition-all duration-300 bg-fuchsia-200 shadow">
-      <div className="flex items-center font-bold text-l sm:text-2xl">
+    <header id="mainHeader" className="flex flex-row items-center justify-between p-0 fixed w-full top-0 z-50 transition-all duration-300 bg-fuchsia-200 shadow">
+      <div className="flex items-center font-bold text-4xl sm:text-3xl pl-4">
         <a href="/" className="flex items-center font-bold text-purple-700 no-underline">
-          <img src="/assets/payplus.svg" alt="Payplus Logo" className="w-10 h-10 mr-2" />
-          PayPlus
+          <img src="/assets/payplus.svg" alt="Payplus Logo" className="w-20 h-20 mr-2"/>
+        
         </a>
 
         {/* line className change */}
-        <a href="https://web.whatsapp.com/" target="_blank" rel="noopener noreferrer" className="hidden md:flex items-center font-bold text-white no-underline ml-10" style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.3)' }} id="Whatsapp">
-          <img src="/assets/logo/Whatsapp.png" alt="Whatsapp" className="w-12 h-10 mr-1" />
-          +880 1958-174662
+        <a href="/" className="flex items-center font-bold text-purple-700 no-underline"> 
+          PayPlus
         </a>
       </div>
 
       {/*line এ className change*/}
-      <nav className="hidden md:flex flex-row space-x-3 sm:space-x-5 text-gray-600 font-medium text-m sm:text-2xl">
+      <nav className="hidden md:flex flex-row space-x-3 sm:space-x-5 text-gray-600 font-medium text-m sm:text-2xl pr-2">
         <a href="/#Home" className="border-animate">
           Home
           <span></span><span></span><span></span><span></span>
@@ -114,7 +113,7 @@ const Header = () => {
       {isMenuOpen && (
         <div className="absolute top-full left-0 w-full bg-white shadow-lg md:hidden">
           <nav className="flex flex-col space-y-2 p-4">
-            <a href="/home" className="border-animate text-center py-2" onClick={() => setIsMenuOpen(false)}>
+            <a href="/#home" className="border-animate text-center py-2" onClick={() => setIsMenuOpen(false)}>
               Home
               <span></span><span></span><span></span><span></span>
             </a>
@@ -129,11 +128,6 @@ const Header = () => {
             <a href="#Contact" className="border-animate text-center py-2" onClick={() => setIsMenuOpen(false)}>
               Contact
               <span></span><span></span><span></span><span></span>
-            </a>
-            {/* Mobile WhatsApp */}
-            <a href="https://web.whatsapp.com/" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center bg-green-500 text-white py-2 rounded mt-2" onClick={() => setIsMenuOpen(false)}>
-              <img src="../assets/Whatsapp.png" alt="Whatsapp" className="w-6 h-6 mr-2" />
-              +880 1958-174662
             </a>
           </nav>
         </div>

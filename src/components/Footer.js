@@ -14,10 +14,10 @@ const Footer = () => {
             <img src="/assets/payplus.svg" alt="Payplus Logo" className="w-20 h-20 mr-2" />
             <span className="text-3xl font-bold">Pay<span className="text-black">Plus</span></span>
           </div>
-          <p className="mb-2">Service Hub Limited</p>
+          <p className="mb-2">PayPos Limited</p>
           <p className="mb-2">DevoTech Technology Park</p>
           <p className="mb-2">Plot # 11, Road # 113/A, Gulshan-2, Dhaka 1212, Bangladesh</p>
-          <p className="mb-2"><strong>Operational Office:</strong> H: TA-135, Middle Badda, Gulshan Link Road, Dhaka 1212</p>
+          <p className="mb-2"><strong>Operational Office:</strong> House: TA-135, Middle Badda, Gulshan Link Road, Dhaka 1212</p>
           <p className="mb-2"><strong>Regional Office:</strong> Ka-286, BIDC Road, Joydebpur, Gazipur - 1700</p>
           <p className="mb-2">Email: <a href="mailto:info@paystation.com.bd" className="underline hover:text-purple-700">info@paystation.com.bd</a></p>
           <p>Contact: <a href="tel:09613820890" className="underline hover:text-purple-700">09613820890</a></p>
@@ -64,7 +64,7 @@ const Footer = () => {
       
       <div className="flex justify-center items-center">
         <p className="text-sm text-center">
-          Copyright © {currentYear} | All rights reserved by Service Hub Ltd.
+          Copyright © {currentYear} | All rights reserved by PayPos Ltd. | License No: TRAD/DNCC/000462/2022
         </p>
       </div>
 
