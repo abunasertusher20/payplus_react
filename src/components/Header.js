@@ -77,7 +77,7 @@ const Header = () => {
 
       {/*line এ className change*/}
       <nav className="hidden md:flex flex-row space-x-3 sm:space-x-5 text-gray-600 font-medium text-m sm:text-2xl pr-2">
-        <a href="/#Home" className="border-animate">
+        <a href="/" className="border-animate">
           Home
           <span></span><span></span><span></span><span></span>
         </a>
@@ -113,7 +113,7 @@ const Header = () => {
       {isMenuOpen && (
         <div className="absolute top-full left-0 w-full bg-white shadow-lg md:hidden">
           <nav className="flex flex-col space-y-2 p-4">
-            <a href="/#Home" className="border-animate text-center py-2" onClick={() => setIsMenuOpen(false)}>
+            <a href="/Home" className="border-animate text-center py-2" onClick={() => setIsMenuOpen(false)}>
               Home
               <span></span><span></span><span></span><span></span>
             </a>
