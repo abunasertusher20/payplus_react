@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useAudio } from '../hooks/useAudio';
 
 const Hero = () => {
-  const audioRef = useAudio();
+  const audioRef = useAudio(); 
 
   useEffect(() => {
     const handleScroll = () => {
@@ -17,7 +17,7 @@ const Hero = () => {
 
   return (
     <>
-      <audio id="bgAudio" src="/assets/welcome.mp3" muted ref={audioRef}></audio>
+      <audio id="bgAudio" src="/public/assets/silent_3sec.mp3" muted ref={audioRef}></audio>
       
       <section className="app-section flex flex-col sm:flex-row text-white py-8 px-6 lg:flex lg:items-center lg:justify-between mt-header">
         <div className="max-w-xl">
