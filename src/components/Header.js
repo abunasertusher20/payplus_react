@@ -113,7 +113,7 @@ const Header = () => {
       {isMenuOpen && (
         <div className="absolute top-full left-0 w-full bg-white shadow-lg md:hidden">
           <nav className="flex flex-col space-y-2 p-4">
-            <a href="/Home" className="border-animate text-center py-2" onClick={() => setIsMenuOpen(false)}>
+            <a href="/" className="border-animate text-center py-2" onClick={() => setIsMenuOpen(false)}>
               Home
               <span></span><span></span><span></span><span></span>
             </a>
