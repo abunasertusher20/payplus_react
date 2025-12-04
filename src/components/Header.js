@@ -68,14 +68,9 @@ const Header = () => {
           <img src="/assets/payplus.svg" alt="Payplus Logo" className="w-20 h-20 mr-2"/>
         
         </a>
+      </div> 
 
-        {/* line className change */}
-        <a href="/" className="flex items-center font-bold text-purple-700 no-underline"> 
-          PayPlus
-        </a>
-      </div>
-
-      {/*line এ className change*/}
+      {/*line className change*/}
       <nav className="hidden md:flex flex-row space-x-3 sm:space-x-5 text-gray-600 font-medium text-m sm:text-2xl pr-2">
         <a href="/" className="border-animate">
           Home
