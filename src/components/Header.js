@@ -63,7 +63,7 @@ const Header = () => {
 
   return (
     <header id="mainHeader" className="flex flex-row items-center justify-between p-0 fixed w-full top-0 z-50 transition-all duration-300 bg-fuchsia-200 shadow">
-      <div className="flex items-center font-bold text-4xl sm:text-3xl pl-4">
+      <div className="flex items-center font-bold text-4xl sm:text-3xl pl-10">
         <a href="/" className="flex items-center font-bold text-purple-700 no-underline">
           <img src="/assets/payplus.svg" alt="Payplus Logo" className="w-20 h-20 mr-2"/>
         

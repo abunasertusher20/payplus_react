@@ -19,7 +19,7 @@ const Hero = () => {
     <>
       <audio id="bgAudio" src="/public/assets/silent_3sec.mp3" muted ref={audioRef}></audio>
       
-      <section className="app-section flex flex-col sm:flex-row text-white py-8 px-6 lg:flex lg:items-center lg:justify-between mt-header">
+      <section id="HeroSection" className="app-section hero-fixed-gap flex flex-col sm:flex-row text-white py-8 px-6 lg:flex lg:items-center lg:justify-between mt-header">
         <div className="max-w-xl">
           <h1 className="text-3xl md:text-4xl font-bold ml-8 mb-4 slide-down">
             Payplus – Your One-Stop 

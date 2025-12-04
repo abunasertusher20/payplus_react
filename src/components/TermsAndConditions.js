@@ -1,17 +1,12 @@
 import React, { useEffect } from 'react';
-import Header from './Header';
-import Footer from './Footer';
 
 const TermsAndConditions = () => {
- React.useEffect(() => {
+  useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
   return (
     <div className="bg-fuchsia-100 text-gray-800 font-sans min-h-screen">
-      {/* Use existing Header component */}
-      <Header />
-      
       {/* Main Content */}
       <main className="pt-20 pb-10 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto bg-white rounded-lg shadow-lg p-6 sm:p-8">
@@ -108,8 +103,7 @@ const TermsAndConditions = () => {
         </div>
       </main>
 
-      {/* Use existing Footer component */}
-      <Footer />
+      {/* Footer is provided globally in `App.js` */}
     </div>
   );
 };
